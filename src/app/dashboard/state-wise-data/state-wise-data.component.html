@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>State/UT</th>
+                    <th>Total Cases</th>
+                    <th>Active Cases</th>
+                    <th>Cases Recovered</th>
+                    <th>Deaths Reported</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let state of states.statewise">
+                    <td>{{state.state}}</td>
+                    <td>{{state.confirmed}}</td>
+                    <td>{{state.active}}</td>
+                    <td>{{state.recovered}}</td>
+                    <td>{{state.deaths}}</td>
+                
+                </tr>
+            </tbody>
+            </table>
+    </div>

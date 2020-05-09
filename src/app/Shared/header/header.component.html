@@ -1,0 +1,27 @@
+<div class="container">
+    <div id="heading">
+    <h1 class="h-primary center"> COVID-19 Detailed Dashboard ! </h1>
+    
+    </div>
+    <div id="stats">
+        <div class="box">
+            <h2 class="h-secondary center">Total Cases</h2>
+            <p class="center">{{last.totalconfirmed}}</p>
+            <!-- <a href="#">Get Started</a> -->
+        </div>
+        <div class="box">
+            <h2 class="h-secondary center">Active Cases</h2>
+            <p class="center"> {{last.totalconfirmed-last.totalrecovered-last.totaldeceased}}</p>
+            <!-- <a href="#">Get Started</a> -->
+        </div>
+        <div class="box">
+            <h2 class="h-secondary center">Cases Recovered</h2>
+            <p class="center"> {{last.totalrecovered}} </p>
+            <!-- <a href="#">Get Started</a> -->
+        </div>
+        <div class="box">
+            <h2 class="h-secondary center   "> Deaths Reported</h2>
+            <p class="center">{{last.totaldeceased}}</p>
+            <!-- <a href="#">Get Started</a> -->
+        </div>
+    </div>
