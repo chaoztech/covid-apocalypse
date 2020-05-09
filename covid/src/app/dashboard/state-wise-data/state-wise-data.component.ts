@@ -7,14 +7,23 @@ import { AppservicesService } from 'src/app/appservices.service';
   styleUrls: ['./state-wise-data.component.css']
 })
 export class StateWiseDataComponent implements OnInit {
-  public states:any ;
+  public states:any=[] ;
   last:any;
+  statedata:any = [];
+  openPanel:boolean = false;
   constructor(private appservicesService: AppservicesService) { }
 
   ngOnInit() {
     this.appservicesService.getData().subscribe((data)=>{
-      this.states = data
-      console.log(this.states.statewise);
+     
+      this.statedata = data;
+      for (var i=0 ; i< this.statedata.statewise.length;i++){
+        if(this.statedata.statewise[i].state != "Total"){
+          this.states.push(this.statedata.statewise[i]);
+        }
+      }
+      console.log("thdasdads",this.states)
+      
       this.last =  this.states.cases_time_series[this.states.cases_time_series.length - 1]
       
     //   this.resultArray = Object.keys(data).map(function(personNamedIndex){
@@ -22,7 +31,7 @@ export class StateWiseDataComponent implements OnInit {
     //     // do something with person
     //     console.log("data",person)
     //     return person;
-        
+
     // });
     });
   
