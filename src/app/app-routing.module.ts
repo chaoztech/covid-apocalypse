@@ -6,6 +6,7 @@ import { HeaderComponent } from './Shared/header/header.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 
 const routes:Routes=[
+  { path:'', component : DashboardComponent },
   { path:'dashboard', component : DashboardComponent },
   { path:'statedata', component: StateWiseDataComponent },
   { path:'header', component : HeaderComponent },

@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
     this.appservicesService.getData().subscribe((data)=>{
       this.states = data
       console.log(this.states);
-      this.last =  this.states.cases_time_series[this.states.cases_time_series.length - 1]
+      // this.last =  this.states.cases_time_series[this.states.cases_time_series.length - 1]
       
     //   this.resultArray = Object.keys(data).map(function(personNamedIndex){
     //     let person = data[personNamedIndex];

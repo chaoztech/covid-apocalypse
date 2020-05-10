@@ -10,6 +10,7 @@ export class StateWiseDataComponent implements OnInit {
   public states:any=[] ;
   last:any;
   statedata:any = [];
+  temp:any = [];
   openPanel:boolean = false;
   constructor(private appservicesService: AppservicesService) { }
 

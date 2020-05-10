@@ -1,9 +1,5 @@
 <div class="container">
 <app-header></app-header>
-
-
-
-
     <div>
         <table class="table table-bordered">
             <thead>
@@ -15,27 +11,24 @@
                     <th>Deaths Reported</th>
                 </tr>
             </thead>
-            <tbody  *ngFor="let state of states; index as i;">
+            <tbody  *ngFor="let state of states">
                 <tr (click)="openPanel = !openPanel">
                     <td>{{state.state}}</td>
                     <td>{{state.confirmed}}</td>
                     <td>{{state.active}}</td>
                     <td>{{state.recovered}}</td>
                     <td>{{state.deaths}}</td>
-                
                 </tr>
                 <tr>
-                    <div class="" *ngIf="openPanel">
-                        Lo -- Khul Gya !!
-                    </div>
+                    
+                        <div class="" *ngIf="openPanel">
+                            Lo -- Khul Gya !!
+                        </div>
+                    
+                    
                 </tr>
             </tbody>
-            </table>
+        </table>
     </div>
-
-    
-                <p (click)="openPanel = !openPanel">mandy</p>
-        
-                
-
-      </div>
+    <p (click)="openPanel = !openPanel">mandy</p>
+</div>
